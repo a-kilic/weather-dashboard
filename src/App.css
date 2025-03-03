@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   background: #f0f0f0;
   text-align: center;
+  transition: background 0.3s, color 0.3s;
 }
 
 .container {
@@ -11,17 +12,38 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark .container {
+  background: #1e1e1e;
+  color: white;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
 .search-bar input {
   padding: 10px;
   width: 70%;
   margin-right: 10px;
+  border: 1px solid #ccc;
 }
 
 .search-bar button {
   padding: 10px;
   cursor: pointer;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.search-bar button:hover {
+  background: #0056b3;
 }
 
 .weather-card {
@@ -29,6 +51,10 @@ body {
   padding: 15px;
   margin-top: 15px;
   border-radius: 5px;
+}
+
+.dark .weather-card {
+  background: #333;
 }
 
 .forecast-container {
@@ -41,6 +67,10 @@ body {
   padding: 10px;
   margin-top: 10px;
   border-radius: 5px;
+}
+
+.dark .forecast-item {
+  background: #444;
 }
 
 .favorites ul {
@@ -56,4 +86,22 @@ body {
 
 .favorites li:hover {
   background: #e0e0e0;
+}
+
+.dark .favorites li:hover {
+  background: #333;
+}
+
+.dark-mode-btn {
+  background: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.dark-mode-btn:hover {
+  background: #555;
 }
